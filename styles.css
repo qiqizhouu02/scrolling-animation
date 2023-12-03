@@ -3,35 +3,49 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Satoshi', sans-serif;
+}
+
 .parallax-section {
     position: relative;
     height: 100vh;
-    /* Full height of the viewport */
     overflow: hidden;
 }
 
-.parallax-section img {
+.map-image{
+    display: none;
+    transition: .5s ease-in-out;
     overflow: hidden;
     height: 100vh;
-    position: absolute;
+    position: sticky;
+    object-fit: cover;
     width: 100%;
     top: 0;
     left: 0;
     z-index: -1;
-    /* Ensure the image stays behind the text */
-    transition: transform 0.5s ease;
-    /* Smooth transition for parallax effect */
 }
+
+.active{
+    display:block ;
+    transition: .5s ease-in-out;
+}
+
 
 .parallax-section p {
     position: absolute;
-    width: 100%;
+    width: 50vw;
     text-align: center;
     top: 50%;
     color: white;
-    font-size: 48pt;
+    font-size: 20pt;
     /* Center the text vertically */
     transform: translateY(-50%);
+    transform: translateX(50%);
     transition: top 0.5s ease;
     /* Smooth transition for text movement */
+}
+
+.parallax-section span{
+    background-color: rgba(0, 0, 0, 0.7);
 }
