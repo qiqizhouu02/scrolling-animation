@@ -1,35 +1,37 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
 }
 
-.parallax-container {
+.parallax-section {
     position: relative;
-    width: 100%;
-    height: 200vh;
-    /* Adjust the height as needed */
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow: hidden;
 }
 
-.parallax-image {
+.parallax-section img {
+    overflow: hidden;
+    height: 100vh;
     position: absolute;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+    /* Ensure the image stays behind the text */
+    transition: transform 0.5s ease;
+    /* Smooth transition for parallax effect */
 }
 
-.parallax-text {
+.parallax-section p {
     position: absolute;
-    bottom: -100px;
-    /* Start below the viewport */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    top: 50%;
     color: white;
-    transition: bottom 0.5s ease;
+    font-size: 48pt;
+    /* Center the text vertically */
+    transform: translateY(-50%);
+    transition: top 0.5s ease;
+    /* Smooth transition for text movement */
 }
