@@ -8,7 +8,10 @@ window.addEventListener('scroll', () => {
         const sectionHeight = section.offsetHeight;
         const scrollPosition = window.scrollY;
         const pulse = document.querySelector('.pulse');
-        const heatOverlay = document.querySelector('.overlay-image');
+        const heatOverlay = document.querySelector('.heat-overlay-image');
+        const roofOverlay = document.querySelector('.roof-overlay-image');
+        const mapImage7 = document.querySelector('.image7');
+
         const transitionOffset = 100;
 
         if (scrollPosition + transitionOffset >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
@@ -18,7 +21,9 @@ window.addEventListener('scroll', () => {
                     img.classList.add('active');
                 }
                 if (section.getAttribute('id') === 'section3'){
-                    heatOverlay.style.opacity = '1';
+                    setTimeout(function() {
+                        heatOverlay.style.opacity = '1';
+                    }, 1000);
                 }else{
                     heatOverlay.style.opacity = '0';
                 }
@@ -27,6 +32,16 @@ window.addEventListener('scroll', () => {
                 }else{
                     pulse.style.opacity = "0";
                 }
+                if (section.getAttribute('id') === 'section7' || section.getAttribute('id') === 'section8'){
+                    setTimeout(function() {
+                        roofOverlay.style.opacity = '.8';
+                    }, 2000);
+
+                }else{
+                    roofOverlay.style.opacity = '0';
+                }
+
+                
             });
         }
     });
