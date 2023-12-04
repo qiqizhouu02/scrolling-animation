@@ -7,7 +7,7 @@ body{
     font-family: 'Satoshi', sans-serif;
 }
 .parallax-wrapper{
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     /* height: 100vh; */
     scroll-snap-type: y mandatory;
 }
@@ -23,9 +23,60 @@ body{
     height: 100vh;
 }
 
+.overlay-image{
+    opacity: 0;
+    transition: opacity 2.5s ease-in;
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.pulse-container{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    top:0;
+    left:0;
+}
+
+.pulse{
+    position: relative;
+    width: 400px;
+    height:400px;
+    border-radius: 50%;
+    transition: opacity 2s ease-in-out;
+    background: rgba(179, 16, 16, 0.6);
+    opacity: 0;
+}
+
+.pulse span{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    opacity:.5;
+    animation: pulseAnimate 8s ease-out infinite;
+    animation-delay: calc(1s * var(--i));
+}
+
+@keyframes pulseAnimate{
+    100%{
+        opacity: 0;
+        transform:scale(7);
+    }
+}
+
 .map-image{
     opacity: 0;
-    transition: 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
     overflow: hidden;
     height: 100vh;
     position: fixed;
@@ -41,13 +92,14 @@ body{
     transition: 1s ease-in-out;
 }
 
+
 .parallax-section p {
     position: absolute;
     width: 50vw;
     text-align: center;
     top: 50%;
     color: white;
-    font-size: 20pt;
+    font-size: 30pt;
     /* Center the text vertically */
     transform: translateY(-50%);
     transform: translateX(50%);
