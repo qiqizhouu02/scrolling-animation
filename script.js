@@ -21,9 +21,9 @@ window.addEventListener('scroll', () => {
                     img.classList.add('active');
                 }
                 if (section.getAttribute('id') === 'section3'){
-                    setTimeout(function() {
+                    // setTimeout(function() {
                         heatOverlay.style.opacity = '1';
-                    }, 1000);
+                    // }, 1000);
                 }else{
                     heatOverlay.style.opacity = '0';
                 }
@@ -33,10 +33,9 @@ window.addEventListener('scroll', () => {
                     pulse.style.opacity = "0";
                 }
                 if (section.getAttribute('id') === 'section7' || section.getAttribute('id') === 'section8'){
-                    setTimeout(function() {
+                    // setTimeout(function() {
                         roofOverlay.style.opacity = '.8';
-                    }, 2000);
-
+                    // }, 2000);
                 }else{
                     roofOverlay.style.opacity = '0';
                 }
