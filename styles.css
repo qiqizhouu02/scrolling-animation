@@ -138,3 +138,44 @@ body{
     transition: top 0.5s ease;
     background-color: transparent !important;
 }
+
+.rain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.rain-overlay::before {
+    content: '';
+    position: fixed;
+    width: 200%; /* Enough for overlap and smooth transition */
+    height: 100%;
+    top: 0;
+    left: 0; /* Start with the overlay fully visible */
+    background: repeating-linear-gradient(
+        to top right,
+        rgba(0, 0, 255, 0.2),
+        rgba(0, 0, 255, 0.4) 25%,
+        rgba(0, 0, 255, 0.2) 50%,
+        rgba(0, 0, 255, 0.4) 75%,
+        rgba(0, 0, 255, 0.2) 100%
+    );
+    background-size: 50% 100%;
+    animation: moveRain 10s linear infinite;
+}
+
+@keyframes moveRain {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

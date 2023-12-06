@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
         const pulse = document.querySelector('.pulse');
         const heatOverlay = document.querySelector('.heat-overlay-image');
         const roofOverlay = document.querySelector('.roof-overlay-image');
-        const mapImage7 = document.querySelector('.image7');
+        const rainOverlay = document.querySelector('.rain-overlay');
 
         const transitionOffset = 100;
 
@@ -20,6 +20,12 @@ window.addEventListener('scroll', () => {
                 if (section.getAttribute('id') === img.getAttribute('href').substring(1)) {
                     img.classList.add('active');
                 }
+                if (section.getAttribute('id') === 'section1' || section.getAttribute('id') === 'section1'){
+                    rainOverlay.style.opacity = '1';
+                }else{
+                    rainOverlay.style.opacity = '0';
+                }
+
                 if (section.getAttribute('id') === 'section3'){
                     // setTimeout(function() {
                         heatOverlay.style.opacity = '1';
