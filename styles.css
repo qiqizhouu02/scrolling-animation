@@ -101,7 +101,9 @@ body{
     left: 0;
     z-index: -1;
 }
-
+.image1{
+    opacity:1;
+}
 .active{
     opacity: 100% ;
     transition: 2s ease-in-out;

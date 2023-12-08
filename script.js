@@ -13,6 +13,8 @@ function checkVisibility() {
                 const heatOverlay = document.querySelector('.heat-overlay-image');
                 const roofOverlay = document.querySelector('.roof-overlay-image');
                 const rainOverlay = document.querySelector('.rain-overlay');
+                const image1 = document.querySelector('.image1');
+
 
                 const transitionOffset = 100;
 
@@ -43,9 +45,11 @@ function checkVisibility() {
                         if (section.getAttribute('id') === 'section7' || section.getAttribute('id') === 'section8') {
                             // setTimeout(function() {
                             roofOverlay.style.opacity = '.8';
+                            image1.style.opacity="0";
                             // }, 2000);
                         } else {
                             roofOverlay.style.opacity = '0';
+                            image1.style.opacity="1";
                         }
 
 
