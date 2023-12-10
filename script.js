@@ -24,9 +24,11 @@ function checkVisibility() {
                         if (section.getAttribute('id') === img.getAttribute('href').substring(1)) {
                             img.classList.add('active');
                         }
-                        if (section.getAttribute('id') === 'section1' || section.getAttribute('id') === 'section1') {
+                        if (section.getAttribute('id') === 'section2'){
+                            rainOverlay.style.opacity = '0';
+                        } else if (section.getAttribute('id') === 'section1'){
                             rainOverlay.style.opacity = '1';
-                        } else {
+                        } else{
                             rainOverlay.style.opacity = '0';
                         }
 

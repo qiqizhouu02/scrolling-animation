@@ -3,13 +3,40 @@
     padding: 0;
 }
 
+.title-container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin:20vw;
+}
+
+h2{
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    text-shadow: 0 0 12px #000000;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 1000;
+    text-shadow: 0 0 12px #000000;
+}
+
 body{
     font-family: 'Satoshi', sans-serif;
 }
 .parallax-wrapper{
     overflow-y: scroll;
-    /* height: 100vh; */
     scroll-snap-type: y mandatory;
+    /* transform: translateY(-100vh); */
 }
 
 .parallax-section {
@@ -20,7 +47,8 @@ body{
 }
 
 .imgs-container{
-    height: 100vh;
+    /* height: 100vh; */
+    z-index: -10;
 }
 
 .heat-overlay-image{
@@ -150,7 +178,7 @@ body{
     background: transparent;
     pointer-events: none;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 2s ease-in-out;
 }
 
