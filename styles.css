@@ -3,12 +3,33 @@
     padding: 0;
 }
 
+body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+@media (max-width: 1090px){
+    .parallax-section p {
+        font-size: 26px !important;
+        /* Center the text vertically */
+        /* Smooth transition for text movement */
+    }
+
+    h2{
+        margin-top: 20vh;
+    }
+}
+
+
 .title-container{
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    margin:20vw;
+    padding-top:20vw;
 }
 
 h2{

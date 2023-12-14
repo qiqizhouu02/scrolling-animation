@@ -45,16 +45,12 @@ function checkVisibility() {
                             pulse.style.opacity = "0";
                         }
                         if (section.getAttribute('id') === 'section7' || section.getAttribute('id') === 'section8') {
-                            // setTimeout(function() {
                             roofOverlay.style.opacity = '.8';
                             image1.style.opacity="0";
-                            // }, 2000);
                         } else {
                             roofOverlay.style.opacity = '0';
                             image1.style.opacity="1";
                         }
-
-
                     });
                 }
             });
