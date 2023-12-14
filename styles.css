@@ -21,8 +21,14 @@ body::-webkit-scrollbar {
     h2{
         margin-top: 20vh;
     }
-}
 
+    .sec8-text{
+        font-weight: 600 !important;
+        color: black !important;
+        padding: 1px;
+
+    }
+}
 
 .title-container{
     display: flex;
