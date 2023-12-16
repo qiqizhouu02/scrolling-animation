@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     margin:20vw;
+
 }
 
 h2{
@@ -71,13 +72,13 @@ h2{
     text-shadow: 0 0 10px #000000;
 }
 .title span{
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1px;
+    /* background-color: rgba(54, 0, 217, 0.5); */
+    padding: 1px 5px;
 }
 
 .sub-title span{
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1px;
+    /* background-color: rgba(54, 0, 217, 0.5); */
+    padding: 1px 5px;
 }
 
 
@@ -192,6 +193,10 @@ body{
 }
 .image1{
     opacity:1;
+    /* filter: sepia(20%); */
+    -webkit-filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+  filter: sepia(100%) hue-rotate(190deg) saturate(400%) brightness(60%);
+    /* filter: brightness(50%); */
 }
 .active{
     opacity: 100% ;
