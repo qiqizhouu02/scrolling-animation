@@ -28,7 +28,7 @@ function checkVisibility() {
                 const roofOverlay = document.querySelector('.roof-overlay-image');
                 const rainOverlay = document.querySelector('.rain-overlay');
                 const image1 = document.querySelector('.image1');
-                const whiteBg =document.querySelector('.white-bg');
+                const whiteBg =document.querySelector('.green-bg');
                 const transitionOffset = 100;
                 
         
